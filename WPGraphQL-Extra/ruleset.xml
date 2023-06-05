@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WPGraphQL Strict Coding Standard" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+	<description>Best practices beyond the WPGraphQL core standards</description>
+
+	<rule ref="WPGraphQL-Strict" />
+
+	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
+
+	<!-- The following rules enforce code formatting standards.-->
+	<rule ref="SlevomatCodingStandard.Classes.BackedEnumTypeSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.ClassMemberSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.ConstantSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+		<properties>
+			<property name="linesCountAfterOpeningBrace" value="0"/>
+			<property name="linesCountBeforeClosingBrace" value="0"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.EnumCaseSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.MethodSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.PropertyDeclaration" />
+	<rule ref="SlevomatCodingStandard.Classes.PropertySpacing" />
+	<rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration" />
+	<rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+		<properties>
+			<property name="linesCountBeforeFirstUseWhenFirstInClass" value="0"/>
+		</properties>
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator" />
+
+	<rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
+		<properties>
+			<property name="caseSensitive" value="true"/>
+		</properties>
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.Functions.ArrowFunctionDeclaration" />
+	<rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction" />
+
+	<rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
+
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+		<!-- WP dependencies are too loosely typed to implement this safely. -->
+		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint" />
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+		<!-- WP dependencies are too loosely typed to implement this safely. -->
+		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint" />
+		<!-- Conflicts with Squiz.Commenting.-->
+		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation" />
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+		<!-- WP dependencies are too loosely typed to implement this safely. -->
+		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint" />
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
+
+	<rule ref="SlevomatCodingStandard.Variables.UselessVariable" />
+
+</ruleset>
