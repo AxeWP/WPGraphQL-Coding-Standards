@@ -36,6 +36,9 @@
 
 	<!-- Additional commenting sniffs are in WPGraphQL-Docs -->
 	<rule ref="Squiz.Commenting.FunctionComment">
+		<!-- Enabled in WPGraphQL-Docs -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
+		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
 		<properties>
 				<property name="skipIfInheritdoc" value="true" />
 		</properties>
