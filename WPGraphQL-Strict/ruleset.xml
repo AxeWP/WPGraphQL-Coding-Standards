@@ -30,9 +30,6 @@
 	<rule ref="WordPress.DateTime.RestrictedFunctions.date_date">
 		<severity>5</severity>
 	</rule>
-	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
-		<severity>5</severity>
-	</rule>
 
 	<!-- Additional commenting sniffs are in WPGraphQL-Docs -->
 	<rule ref="Squiz.Commenting.FunctionComment">
@@ -73,7 +70,6 @@
 	<rule ref="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch" />
 	<rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
 
-	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
 	<rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
 	<rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
 

@@ -37,7 +37,6 @@
 		<exclude name="WordPress.CodeAnalysis.AssignmentInCondition.Found"/>
 
 		<!-- Added back in WPGraphQL-Strict -->
-		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
 		<exclude name="WordPress.DateTime.RestrictedFunctions.date_date"/>
 	</rule>
@@ -55,4 +54,6 @@
 
 	<!-- Enforce FQCN in comments -->
 	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
+	<!-- Enforce static closures -->
+	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
 </ruleset>
