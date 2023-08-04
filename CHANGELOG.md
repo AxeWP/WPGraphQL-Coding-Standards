@@ -6,6 +6,12 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 ## [Unreleased]
 
+## [1.0.0-beta.3] - 2023-08-04
+- feat!: Move `WordPress.WP.I18n.MissingTranslatorsComment` from `WPGraphQL-Strict` to `WPGraphQL-Minimum`. (Added to WPGraphQL in https://github.com/wp-graphql/wp-graphql/pull/2856)
+- feat!: Move `SlevomatCodingStandard.Functions.StaticClosure` from `WPGraphQL-Strict` to `WPGraphQL-Minimum`. (Added to WPGraphQL in https://github.com/wp-graphql/wp-graphql/pull/2855)
+- chore: Update `slevomat/coding-standard` to `8.13.4`.
+- chore: Update Composer dev-deps.
+
 ## [1.0.0-beta.2] - 2023-06-17
 - dev: Remove `Squiz.Commenting.FunctionComment.ParamCommentFullStop` and `Squiz.Commenting.FunctionComment.EmptyThrows` from `WPGraphQL-Strict`.
 - dev: Update minimum PHPUnit version to `8.5.0`.
