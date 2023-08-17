@@ -6,6 +6,10 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 ## [Unreleased]
 
+## [1.0.0-beta.4] - 2023-08-17
+- feat!: Updated `WPGraphQL-Minimum` and `WPGraphQL-Strict` based on the latest changes to WPGraphQL core. (See https://github.com/wp-graphql/wp-graphql/compare/release/v1.14.10...develop#diff-05ae9cddcaec1e845771a7db224961439f83ef5939ec67d3a48744cb34d7e58b)
+- feat: Add `WPGraphQL-Core` coding standard, for a snapshot of what's currently being used upstream.
+
 ## [1.0.0-beta.3] - 2023-08-04
 - feat!: Move `WordPress.WP.I18n.MissingTranslatorsComment` from `WPGraphQL-Strict` to `WPGraphQL-Minimum`. (Added to WPGraphQL in https://github.com/wp-graphql/wp-graphql/pull/2856)
 - feat!: Move `SlevomatCodingStandard.Functions.StaticClosure` from `WPGraphQL-Strict` to `WPGraphQL-Minimum`. (Added to WPGraphQL in https://github.com/wp-graphql/wp-graphql/pull/2855)

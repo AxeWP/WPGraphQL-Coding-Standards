@@ -23,8 +23,9 @@ The project provides a superset of sniffs that the WPGraphQL community may need.
 You can use the following standard names when invoking `phpcs` to select the sniffs you want to use.
 
 * [`WPGraphQL`](./WPGraphQL/ruleset.xml) - complete set with all of the sniffs in the project.
-  - [`WPGraphQL-Minimum`](./WPGraphQL-Minimum/ruleset.xml): basic ruleset for WPGraphQL projects, including all the sniffs used by the WPGraphQL plugin itself.
+  - [`WPGraphQL-Minimum`](./WPGraphQL-Minimum/ruleset.xml): basic ruleset for WPGraphQL projects.
   - [`WPGraphQL-Strict`](./WPGraphQL-Strict/ruleset.xml): includes all the sniffs in the `WPGraphQL-Minimum` ruleset, plus additional functional sniffs to help you produce enterprise-ready code.
+	- [`WPGraphQL-Core`](./WPGraphQL-Core/ruleset.xml): includes all the sniffs currently used by the WPGraphQL core project. Currently is the same as the `WPGraphQL-Strict` ruleset, with a few sniffs disabled.
   - [`WPGraphQL-Extra`](./WPGraphQL-Extra/ruleset.xml): includes all the sniffs in the `WPGraphQL-Strict` ruleset, plus additional formatting sniffs to keep your code looks consistent across your project.
   - [`WPGraphQL-Docs`](./WPGraphQL-Docs/ruleset.xml): includes sniffs for doc-blocks and inline comments.
 
