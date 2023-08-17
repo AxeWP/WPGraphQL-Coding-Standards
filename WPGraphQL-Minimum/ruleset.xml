@@ -8,37 +8,30 @@
 		<include-pattern>*\.php$</include-pattern>
 	</rule>
 
-	<!-- Load WordPress VIP Go standards - for use with projects on the (newer) VIP Go platform. -->
+	<!--
+		Load WordPress VIP Go standards
+		see: https://docs.wpvip.com/technical-references/vip-code-analysis-bot/phpcs-report/
+	-->
 	<rule ref="WordPress-VIP-Go" />
 
-	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/>
-
-	<rule ref="WordPress-Core">
+	<rule ref="WordPress">
+		<!-- Definitely should not be added back -->
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="WordPress.CodeAnalysis.AssignmentInCondition.Found"/>
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
 
 		<!-- Should probably not be added back -->
 		<exclude name="PHPCompatibility.Keywords.ForbiddenNamesAsDeclared.objectFound"/>
-
-		<!-- Added back in WPGraphQL-Strict -->
-		<exclude name="Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
-	</rule>
-
-	<!-- Load WordPress Coding standards -->
-	<rule ref="WordPress">
-		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
-		<exclude name="WordPress.Files.FileName"/>
-
-		<!-- Definitely should not be added back -->
-		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
-		<exclude name="WordPress.CodeAnalysis.AssignmentInCondition.Found"/>
 
 		<!-- Added back in WPGraphQL-Strict -->
+		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+		<!-- This would be a breaking change to fix in Core -->
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
-		<exclude name="WordPress.DateTime.RestrictedFunctions.date_date"/>
 	</rule>
 
 	<!-- Tests for inline documentation of code -->
@@ -52,8 +45,30 @@
 	<!-- Enforce short array syntax -->
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
-	<!-- Enforce FQCN in comments -->
-	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
-	<!-- Enforce static closures -->
+	<!--
+		Slevomat sniffs
+		See: https://github.com/slevomat/coding-standard/tree/master#alphabetical-list-of-sniffs
+	-->
+	<rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+	<rule ref="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
+	<rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants" />
+	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiConstantDefinition" />
+	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition" />
+	<rule ref="SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch" />
+	<rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding" />
+
+	<rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator" />
+
 	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
+	<rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
+	<rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
+
+	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
+
+	<rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking" />
+	<rule ref="SlevomatCodingStandard.PHP.TypeCast" />
+
+	<rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable" />
+
 </ruleset>

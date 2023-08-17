@@ -6,28 +6,23 @@
 
 	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
 
-	<!-- These are disabled in WPGraphQL core but should be reenabled. -->
+	<!-- These are disabled in WPGraphQL-Minimum but should be reenabled. -->
 	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
 		<properties>
 			<property name="blank_line_check" value="true"/>
 		</properties>
 	</rule>
-	<rule ref="Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure">
+
+	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
 		<severity>5</severity>
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
-		<severity>5</severity>
-	</rule>
-	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
 		<severity>5</severity>
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature.MultipleArguments">
 		<severity>5</severity>
 	</rule>
 	<rule ref="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid">
-		<severity>5</severity>
-	</rule>
-	<rule ref="WordPress.DateTime.RestrictedFunctions.date_date">
 		<severity>5</severity>
 	</rule>
 
@@ -37,16 +32,19 @@
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
 		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
 		<properties>
-				<property name="skipIfInheritdoc" value="true" />
+			<property name="skipIfInheritdoc" value="true" />
 		</properties>
 	</rule>
 
-	<!-- Slevomat rules - subject to review -->
+	<!--
+		Slevomat sniffs
+		See: https://github.com/slevomat/coding-standard/tree/master#alphabetical-list-of-sniffs
+	-->
 	<rule ref="SlevomatCodingStandard.Arrays">
-		<!-- Conflicts with WPCS -->
-		<exclude name="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
 		<!-- Semantic sorting is a valid pattern -->
 		<exclude name="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys"/>
+		<!-- Conflicts with WPCS -->
+		<exclude name="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
 	</rule>
 
 	<rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference">
@@ -56,30 +54,13 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference" />
-	<rule ref="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
-	<rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants" />
-	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiConstantDefinition" />
-	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition" />
-	<rule ref="SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch" />
-	<rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
-	<rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding" />
-
-	<rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator" />
 
 	<rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
 	<rule ref="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch" />
 	<rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
 
-	<rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
-	<rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
-
 	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses" />
-	<rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
 
-	<rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking" />
-	<rule ref="SlevomatCodingStandard.PHP.TypeCast" />
-
-	<rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable" />
 	<rule ref="SlevomatCodingStandard.Variables.UnusedVariable" >
 		<properties>
 			<property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" value="true" />
