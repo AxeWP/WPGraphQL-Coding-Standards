@@ -16,20 +16,23 @@
 
 	<rule ref="WordPress">
 		<!-- Definitely should not be added back -->
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
-		<exclude name="WordPress.CodeAnalysis.AssignmentInCondition.Found"/>
+		<exclude name="Generic.CodeAnalysis.AssignmentInCondition.Found"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="Universal.Operators.DisallowShortTernary.Found"/>
 		<exclude name="WordPress.Files.FileName"/>
 		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
-		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
 
 		<!-- Should probably not be added back -->
 		<exclude name="PHPCompatibility.Keywords.ForbiddenNamesAsDeclared.objectFound"/>
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 
 		<!-- Added back in WPGraphQL-Strict -->
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
 		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+		<exclude name="WordPress.WP.Capabilities.Undetermined" />
+
 		<!-- This would be a breaking change to fix in Core -->
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
 	</rule>
