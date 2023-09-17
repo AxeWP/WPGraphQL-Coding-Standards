@@ -12,7 +12,7 @@
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
 		<!-- Most capabilities are referenced via variable -->
 		<exclude name="WordPress.WP.Capabilities.Undetermined" />
-		<!-- Needs core decision: https://github.com/wp-graphql/wp-graphql/pull/2924/files#r1317187370 -->
+		<!-- Most would require breaking changes to fix in core. Tracking: https://github.com/wp-graphql/wp-graphql/issues/2925 -->
 		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter" />
 	</rule>
 
