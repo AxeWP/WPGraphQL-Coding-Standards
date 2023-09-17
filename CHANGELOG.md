@@ -4,10 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a CHANGELOG](https://keepachangelog.com/).
 
-## [Unreleased]
+## [2.0.0-beta.1] - 2023-09-17
+
+This release requires WPCS 3.0.0 or higher. Please read the [WordPressCS 3.0 upgrade guide](https://github.com/WordPress/WordPress-Coding-Standards/wiki/Upgrade-Guide-to-WordPressCS-3.0.0-for-ruleset-maintainers) for instructions on how to update your local rulesets and code annotations.
+
 - feat!: Bumped minimum WPCS and VIPCS versions to `3.0.0`.
 - fix!: Remove unused `WordPress.CodeAnalysis.AssignmentInCondition.Found` exclusion from `WPGraphQL-Minimum`.
-- feat!: Add `Generic.CodeAnalysis.UnusedFunctionParameter` and `WordPress.WP.Capabilities.Undetermined` sniffs to `WPGraphQL-Strict`. These sniffs are excluded from `WPGraphQL-Core`.
+- feat!: Add `Generic.CodeAnalysis.UnusedFunctionParameter` and `WordPress.WP.Capabilities.Undetermined` sniffs to `WPGraphQL-Strict`. These sniffs are excluded from the `WPGraphQL-Core` standard.
 
 ## [1.0.0-beta.4] - 2023-08-17
 - feat!: Updated `WPGraphQL-Minimum` and `WPGraphQL-Strict` based on the latest changes to WPGraphQL core. (See https://github.com/wp-graphql/wp-graphql/compare/release/v1.14.10...develop#diff-05ae9cddcaec1e845771a7db224961439f83ef5939ec67d3a48744cb34d7e58b)

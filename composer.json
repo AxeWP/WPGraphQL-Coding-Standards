@@ -2,7 +2,7 @@
 	"name": "axepress/wp-graphql-cs",
 	"type": "phpcodesniffer-standard",
 	"description": "PHP_CodeSniffer rules (sniffs) for the WPGraphQL ecosystem.",
-	"version": "1.0.0-beta.3",
+	"version": "2.0.0-beta.1",
 	"keywords": [
 		"phpcs",
 		"wpcs",
