@@ -30,34 +30,9 @@
 
 	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator" />
 
-	<rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
-		<properties>
-			<property name="caseSensitive" value="true"/>
-		</properties>
-	</rule>
-
 	<rule ref="SlevomatCodingStandard.Functions.ArrowFunctionDeclaration" />
 	<rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction" />
 
 	<rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
-
-	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
-		<!-- WP dependencies are too loosely typed to implement this safely. -->
-		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint" />
-	</rule>
-	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
-	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
-		<!-- WP dependencies are too loosely typed to implement this safely. -->
-		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint" />
-		<!-- Conflicts with Squiz.Commenting.-->
-		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation" />
-	</rule>
-	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
-		<!-- WP dependencies are too loosely typed to implement this safely. -->
-		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint" />
-	</rule>
-	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
-
-	<rule ref="SlevomatCodingStandard.Variables.UselessVariable" />
 
 </ruleset>

@@ -4,15 +4,29 @@
 
 	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
 	
-	<rule ref="Squiz.Commenting">
+	<rule ref="WordPress-Docs">
 		<severity>5</severity>
-		<!-- This is an uncommon pattern. -->
-		<exclude name="Squiz.Commenting.LongConditionClosingComment" />
-		<!-- This is a fairly common pattern. -->
-		<exclude name="Squiz.Commenting.PostStatementComment.Found" />
-		<!-- Not necessary if the var is typed inline. -->
-		<exclude name="Squiz.Commenting.VariableComment.MissingVar" />
+		<!-- Conflicts with FQCN -->
+		<exclude name="Squiz.Commenting.FunctionComment.IncorrectTypeHint" />
+		<!-- Conflicts with b/c in AbstractConnectionResolver -->
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn" />
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment">
+		<properties>
+			<property name="skipIfInheritdoc" value="true" />
+		</properties>
 	</rule>
 
+	<rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessSuppress" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification" />
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessSuppress" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessSuppress" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
 
 </ruleset>

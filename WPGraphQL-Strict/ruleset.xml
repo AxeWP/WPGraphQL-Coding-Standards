@@ -59,13 +59,23 @@
 			<property name="enableOnObjects" value="false"/>
 		</properties>
 	</rule>
-	<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference" />
 
 	<rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
 	<rule ref="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch" />
 	<rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
 
+	<rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
+		<properties>
+			<property name="caseSensitive" value="true"/>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses" />
+
+	<rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
+	<rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint" />
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint" />
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint" />
 
 	<rule ref="SlevomatCodingStandard.Variables.UnusedVariable" >
 		<properties>
