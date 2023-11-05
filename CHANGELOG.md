@@ -30,7 +30,6 @@ This release updates the ruleset based on the latest changes to WPGraphQL core (
 - Moved `SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessSuppress` from `WPGraphQL-Extra` and made explicit.
 - Moved `SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing` from `WPGraphQL-Extra`.
 - Moved `SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification` from `WPGraphQL-Extra` and made explicit.
-- Moved `SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation` from `WPGraphQL-Extra` and made explicit.
 - Moved `SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessSuppress` from `WPGraphQL-Extra` and made explicit.
 - Moved `SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification` from `WPGraphQL-Extra` and made explicit.
 - Moved `SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation` from `WPGraphQL-Extra` and made explicit.

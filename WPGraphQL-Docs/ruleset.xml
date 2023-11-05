@@ -23,7 +23,6 @@
 	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessSuppress" />
 	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
 	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification" />
-	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation" />
 	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessSuppress" />
 	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification" />
 	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
