@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a CHANGELOG](https://keepachangelog.com/).
 
-## [2.0.0-beta.3] - @todo
+## [2.0.0-beta.3] - 2024-04-05
 
 This release explicitly adds `Squiz.WhiteSpace.SuperfluousWhitespace` to the `WPGraphQL-Extra` ruleset, as it is silenced by VIPCS.
 
