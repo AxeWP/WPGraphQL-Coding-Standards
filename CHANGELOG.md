@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a CHANGELOG](https://keepachangelog.com/).
 
+## [ Unreleased ]
+
+## [2.0.0] - 2025-02-15
+
+This release updates the `WPGraphQL-Core` ruleset to match the latest changes included in WPGraphQL [v2.0.0](https://github.com/wp-graphql/wp-graphql/releases/tag/v2.0.0).
+
+It also marks the first v2.0 "stable" release of the WPGraphQL Coding Standards. While it coincides with WPGraphQL v2.0, it's more of a reflection of the stability of the ruleset that these were the only changes needed to WPGraphQL or these rulesets since April 2020.
+
+### WPGraphQL-Core
+
+- Added `WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid`.
+- Added `SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue.NullabilityTypeMissing`.
+
 ## [2.0.0-beta.3] - 2024-04-05
 
 This release explicitly adds `Squiz.WhiteSpace.SuperfluousWhitespace` to the `WPGraphQL-Extra` ruleset, as it is silenced by VIPCS.
@@ -30,7 +43,7 @@ This release updates the ruleset based on the latest changes to WPGraphQL core (
 - Moved `SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint` from `WPGraphQL-Extra` and made explicit.
 
 ### WPGraphQL-Docs
-- Added`Squiz.Commenting` subset of `WordPress-Docs`.
+- Added `Squiz.Commenting` subset of `WordPress-Docs`.
 - Added `SlevomatCodingStandard.TypeHints.LongTypeHints`.
 - Moved `SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification` from `WPGraphQL-Extra` and made explicit.
 - Moved `SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation` from `WPGraphQL-Extra` and made explicit.
