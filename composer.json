@@ -2,7 +2,6 @@
 	"name": "axepress/wp-graphql-cs",
 	"type": "phpcodesniffer-standard",
 	"description": "PHP_CodeSniffer rules (sniffs) for the WPGraphQL ecosystem.",
-	"version": "2.0.0-beta.3",
 	"keywords": [
 		"phpcs",
 		"wpcs",
@@ -33,8 +32,7 @@
 		"php-parallel-lint/php-parallel-lint": "^1.3.2",
 		"php-parallel-lint/php-console-highlighter": "^1.0.0",
 		"phpcompatibility/php-compatibility": "^9",
-		"phpcsstandards/phpcsdevtools": "^1.0",
-		"phpunit/phpunit": "^8.5 || ^9"
+		"phpcsstandards/phpcsdevtools": "^1.0"
 	},
 	"config": {
 		"allow-plugins": {
