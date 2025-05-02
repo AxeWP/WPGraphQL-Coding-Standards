@@ -2,7 +2,13 @@ name: Test Rulesets
 
 on:
   push:
+    branches:
+      - main
+      - develop
   pull_request:
+    branches:
+      - main
+      - develop
   schedule:
     # Run weekly on Mondays at 00:00 UTC
     - cron: '0 0 * * 1'
@@ -59,14 +65,15 @@ jobs:
           # List files to verify extraction
           ls -la
 
-      - name: Test WPGraphQL Core
-        run: |
-          # Run the PHP CodeSniffer tests against the WPGraphQL Core ruleset.
-          vendor/bin/phpcs --standard=./WPGraphQL-Core/ruleset.xml --extensions=php --ignore=vendor,tests,bin,build,docs --colors --report=summary --runtime-set ignore_warnings_on_exit 1 ./temp/wp-graphql/wp-graphql
-
       # Validate the Ruleset XML files.
       - name: Validate the WordPress rulesets
         uses: phpcsstandards/xmllint-validate@v1
         with:
           pattern: "./*/ruleset.xml"
           xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
+
+      - name: Lint WPGraphQL Core
+        run: |
+          # Run the PHP CodeSniffer tests against the WPGraphQL Core ruleset.
+          vendor/bin/phpcs --standard=./WPGraphQL-Core/ruleset.xml --basepath=temp/wp-graphql/wp-graphql --runtime-set ignore_warnings_on_exit 1 -s temp/wp-graphql/wp-graphql/src --report-full --report-width=120
+
