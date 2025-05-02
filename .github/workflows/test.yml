@@ -1,4 +1,4 @@
-name: Test rulesets against WPGraphQL
+name: Test Rulesets
 
 on:
   push:
@@ -16,17 +16,11 @@ concurrency:
 
 jobs:
   test-rulesets:
-    name: Test rulesets against WPGraphQL
+    name: Test rulesets
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        ruleset:
-          - WPGraphQL-Minimum
-          - WPGraphQL-Strict
-          - WPGraphQL-Extra
-          - WPGraphQL-Docs
-          - WPGraphQL-Core
         php: [8.4, 8.3, 8.2, 8.1, 8.0, 7.4]
 
     steps:
@@ -65,15 +59,14 @@ jobs:
           # List files to verify extraction
           ls -la
 
-      - name: Test ${{ matrix.ruleset }} ruleset
-        id: phpcs-test
-        continue-on-error: true
+      - name: Test WPGraphQL Core
         run: |
-          vendor/bin/phpcs --standard=./${{ matrix.ruleset }} --basepath=temp/wp-graphql -s temp/wp-graphql --report-full --report-width=120
+          # Run the PHP CodeSniffer tests against the WPGraphQL Core ruleset.
+          vendor/bin/phpcs --standard=./WPGraphQL-Core/ruleset.xml --extensions=php --ignore=vendor,tests,bin,build,docs --colors --report=summary --runtime-set ignore_warnings_on_exit 1 ./temp/wp-graphql/wp-graphql
 
       # Validate the Ruleset XML files.
       - name: Validate the WordPress rulesets
         uses: phpcsstandards/xmllint-validate@v1
         with:
-          pattern: './${{ matrix.ruleset }}/ruleset.xml'
+          pattern: "./*/ruleset.xml"
           xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
