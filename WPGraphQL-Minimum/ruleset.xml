@@ -63,7 +63,15 @@
 	<rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
 	<rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
 
-	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation">
+		<properties>
+			<property name="ignoredAnnotationNames" type="array">
+				<element value="@phpstan-var" />
+				<element value="@phpstan-param" />
+				<element value="@phpstan-return" />
+			</property>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
 
 	<rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking" />
