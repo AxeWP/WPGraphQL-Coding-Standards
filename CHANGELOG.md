@@ -6,6 +6,11 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 ## [ Unreleased ]
 
+- fix: Disable `Squiz.Commenting.VariableComment.MissingVar` in favor of `SlevomatCodingStandard.TypeHints.PropertyTypeHint`.
+- fix: Ignore `SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation` for PHPStan annotations.
+- fix: Fix incorrect excludes in `WPGraphQL-Core` ruleset.
+- ci: Add ruleset testing Workflow.
+
 ## [2.0.0] - 2025-02-15
 
 This release updates the `WPGraphQL-Core` ruleset to match the latest changes included in WPGraphQL [v2.0.0](https://github.com/wp-graphql/wp-graphql/releases/tag/v2.0.0).

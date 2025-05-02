@@ -10,12 +10,9 @@
 		<exclude name="WordPress.WP.Capabilities.Undetermined" />
 		<!-- Most would require breaking changes to fix in core. Tracking: https://github.com/wp-graphql/wp-graphql/issues/2925 -->
 		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter" />
-
-		<!-- Depends on Squiz.Commenting.FunctionComment.MissingParamComment -->
-		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
 	</rule>
 
-	<rule ref="WPGraphQL-Docs" />
+	<rule ref="WPGraphQL-Docs">
 		<!-- Conflicts with b/c in AbstractConnectionResolver -->
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn" />
 
@@ -27,5 +24,8 @@
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment" />
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
 		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
-	<rule />
+
+		<!-- Depends on Squiz.Commenting.FunctionComment.MissingParamComment -->
+		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
+	</rule>
 </ruleset>

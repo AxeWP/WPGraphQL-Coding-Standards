@@ -1,0 +1,79 @@
+name: Test Rulesets
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+  schedule:
+    # Run weekly on Mondays at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual triggering
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-rulesets:
+    name: Test rulesets
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: [8.4, 8.3, 8.2, 8.1, 8.0, 7.4]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, xml, zip
+          tools: composer:v2
+          # Allow for PHP deprecation notices.
+          ini-values: error_reporting = E_ALL & ~E_DEPRECATED
+          coverage: none
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate composer.json file
+        run: composer validate --no-check-all --strict
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v3
+        with:
+          # Bust the cache at least once a month - output format: YYYY-MM.
+          custom-cache-suffix: $(date -u "+%Y-%m")
+
+      - name: Download latest WPGraphQL from GitHub Releases
+        run: |
+          # Download the latest release
+          mkdir -p temp/wp-graphql
+          curl -L -o temp/wp-graphql/wp-graphql.zip https://github.com/wp-graphql/wp-graphql/releases/latest/download/wp-graphql.zip
+          # Unzip the downloaded file
+          cd temp/wp-graphql
+          unzip wp-graphql.zip
+          # List files to verify extraction
+          ls -la
+
+      # Validate the Ruleset XML files.
+      - name: Validate the WordPress rulesets
+        uses: phpcsstandards/xmllint-validate@v1
+        with:
+          pattern: "./*/ruleset.xml"
+          xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
+
+      - name: Lint WPGraphQL Core
+        run: |
+          # Run the PHP CodeSniffer tests against the WPGraphQL Core ruleset.
+          vendor/bin/phpcs --standard=./WPGraphQL-Core/ruleset.xml --basepath=temp/wp-graphql/wp-graphql --runtime-set ignore_warnings_on_exit 1 -s temp/wp-graphql/wp-graphql/src --report-full --report-width=120
+
