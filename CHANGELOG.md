@@ -8,6 +8,7 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 - fix: Disable `Squiz.Commenting.VariableComment.MissingVar` in favor of `SlevomatCodingStandard.TypeHints.PropertyTypeHint`.
 - fix: Ignore `SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation` for PHPStan annotations.
+- fix: XML formatting issue in WPGraphQL-Core ruleset.
 - ci: Add ruleset testing Workflow.
 
 ## [2.0.0] - 2025-02-15
