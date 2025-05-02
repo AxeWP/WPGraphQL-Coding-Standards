@@ -56,19 +56,24 @@ jobs:
 
       - name: Download latest WPGraphQL from GitHub Releases
         run: |
-          # Release is from https://github.com/wp-graphql/wp-graphql/releases/latest/download/wp-graphql.zip
+          # Download the latest release
           mkdir -p temp/wp-graphql
-          curl -L -o temp/wp-graphql/wp-graphql.zip
+          curl -L -o temp/wp-graphql/wp-graphql.zip https://github.com/wp-graphql/wp-graphql/releases/latest/download/wp-graphql.zip
+          # Unzip the downloaded file
+          cd temp/wp-graphql
+          unzip wp-graphql.zip
+          # List files to verify extraction
+          ls -la
 
       - name: Test ${{ matrix.ruleset }} ruleset
         id: phpcs-test
         continue-on-error: true
         run: |
-          vendor/bin/phpcs --standard=./${{ matrix.ruleset }} --basepath=temp/wp-graphql -s temp/wp-graphql --report-full
+          vendor/bin/phpcs --standard=./${{ matrix.ruleset }} --basepath=temp/wp-graphql -s temp/wp-graphql --report-full --report-width=120
 
       # Validate the Ruleset XML files.
       - name: Validate the WordPress rulesets
         uses: phpcsstandards/xmllint-validate@v1
         with:
-          pattern: './${{ matrix.ruleset }}/*.xml'
+          pattern: './${{ matrix.ruleset }}/ruleset.xml'
           xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
