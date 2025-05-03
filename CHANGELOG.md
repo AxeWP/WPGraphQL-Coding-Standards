@@ -6,10 +6,27 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 ## [ Unreleased ]
 
+## [ 2.0.1 ] - 2025-05-03
+
+This release fixes several bugs where rules were not being disabled correctly.
+
+We've also added CI to the repo to test the rulesets against the latest WPGraphQL codebase, to preemptively catch future issues.
+
+### WPGraphQL-Core
+
+- fix: Fix incorrect excludes XML block in `WPGraphQL-Core` ruleset.
+
+### WPGraphQL-Docs
+
 - fix: Disable `Squiz.Commenting.VariableComment.MissingVar` in favor of `SlevomatCodingStandard.TypeHints.PropertyTypeHint`.
+
+### WPGraphQL-Minimum
 - fix: Ignore `SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation` for PHPStan annotations.
-- fix: Fix incorrect excludes in `WPGraphQL-Core` ruleset.
-- ci: Add ruleset testing Workflow.
+
+### Misc
+
+- ci: Add test workflow.
+- docs: cleanup Readme.
 
 ## [2.0.0] - 2025-02-15
 

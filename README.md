@@ -6,6 +6,16 @@ This project is a collection of rules and sniffs for PHPCS to validate code deve
  - [Slevomat Coding Standard](https://https://github.com/slevomat/coding-standard)
  - [PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility) & [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP)
 
+-----
+
+![Packagist License](https://img.shields.io/packagist/l/axepress/wp-graphql-cs?color=green) ![Packagist Version](https://img.shields.io/packagist/v/axepress/wp-graphql-cs?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/AxeWP/WPGraphQL-Coding-Standards/2.0.1) ![Packagist Downloads](https://img.shields.io/packagist/dt/axepress/wp-graphql-cs)
+ ![GitHub Repo stars](https://img.shields.io/github/stars/AxeWP/WPGraphQL-Coding-Standards?style=social)
+![Tests](https://img.shields.io/github/actions/workflow/status/axewp/WPGraphQL-Coding-Standards/test.yml?branch=develop&label=CI)
+
+-----
+
+* [Join the WPGraphQL community on Discord.](https://discord.gg/55h7WmYZff)
+
 ## Why use these standards?
 
 Shared coding standards are a great way to ensure consistency in your codebase. They also help to avoid common pitfalls and mistakes, which in turn helps to reduce bugs and technical debt.
@@ -55,3 +65,13 @@ In this file, you will want to configure the following:
 - [`minimum_wp_version`](./phpcs.xml.dist.example#L43) - The minimum WordPress version you want to test against. This should be the lowest version of WordPress that you want to support. While WPGraphQL officially supports WordPress 5.0+, we recommend testing against WordPress 5.6 (the current lowest version actively [tested against](https://github.com/wp-graphql/wp-graphql/blob/develop/.github/workflows/testing-integration.yml)) or higher.
 - [`WordPress.WP.I18n.text_domain`](./phpcs.xml.dist.example#L63) - The text domain used in your project. This is used by the `WordPress.WP.I18n` sniff to check that all translatable strings are assigned to a text domain. We recommend using the format `wp-graphql-<project-name>`.
 - [`WordPress.NamingConventions.PrefixAllGlobals`](./phpcs.xml.dist.example#L57) - The list of prefixes used in your project. This is used by the `WordPress.NamingConventions.PrefixAllGlobals` sniff to check that all global functions, classes, constants, and variables are prefixed.
+
+## Development and Support
+
+The project is actively maintained by [AxePress Development](https://axepress.dev). Community contributions are _welcome_ and **encouraged**.
+
+Basic support is provided for free, both in [this repo](https://github.com/AxeWP/WPGraphQL-Coding-Standards/issues) and in [WPGraphQL's official Discord](https://discord.gg/55h7WmYZff).
+
+Priority support and custom development are available to [our Sponsors](https://github.com/sponsors/AxeWP).
+
+<a href="https://github.com/sponsors/AxeWP" alt="GitHub Sponsors"><img src="https://img.shields.io/static/v1?label=Sponsor%20Us%20%40%20AxeWP&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86&style=for-the-badge" /></a>
