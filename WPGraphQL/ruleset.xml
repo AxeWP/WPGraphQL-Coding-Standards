@@ -2,7 +2,7 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WPGraphQL Strict Coding Standard" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
 	<description>WPGraphQL Coding Standards</description>
 
-	<!-- Includes WPGrapQL-Minimum and WPGraphQL-Strict-->
+	<!-- Includes WPGraphQL-Minimum and WPGraphQL-Strict-->
 	<rule ref="WPGraphQL-Extra" />
 	<rule ref="WPGraphQL-Docs" />
 

@@ -1,3 +1,4 @@
+.vscode/
 build/
 vendor/
 composer.lock
