@@ -1,20 +1,13 @@
-# WPGraphQL Coding Standards for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+# WPGraphQL Coding Standards for PHP_CodeSniffer
 
-This project is a collection of rules and sniffs for PHPCS to validate code developed for the [WPGraphQL](https://github.com/wp-graphql/wp-graphql) ecosystem. It uses rules from:
+![Packagist License](https://img.shields.io/packagist/l/axepress/wp-graphql-cs?color=green) ![Packagist Downloads](https://img.shields.io/packagist/dt/axepress/wp-graphql-cs) ![Packagist Version](https://img.shields.io/packagist/v/axepress/wp-graphql-cs?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/AxeWP/WPGraphQL-Coding-Standards/2.0.1) ![GitHub Repo stars](https://img.shields.io/github/stars/AxeWP/WPGraphQL-Coding-Standards?style=social) ![Tests](https://img.shields.io/github/actions/workflow/status/axewp/WPGraphQL-Coding-Standards/test.yml?branch=develop&label=CI)
+
+-----
+This project is a collection of rules and sniffs for [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) to validate code developed for the [WPGraphQL](https://github.com/wp-graphql/wp-graphql) ecosystem. It uses rules from:
  - [WordPress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards)
  - [Automattic VIP Coding Standards](https://github.com/Automattic/VIP-Coding-Standards)
  - [Slevomat Coding Standard](https://https://github.com/slevomat/coding-standard)
  - [PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility) & [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP)
-
------
-
-![Packagist License](https://img.shields.io/packagist/l/axepress/wp-graphql-cs?color=green) ![Packagist Version](https://img.shields.io/packagist/v/axepress/wp-graphql-cs?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/AxeWP/WPGraphQL-Coding-Standards/2.0.1) ![Packagist Downloads](https://img.shields.io/packagist/dt/axepress/wp-graphql-cs)
- ![GitHub Repo stars](https://img.shields.io/github/stars/AxeWP/WPGraphQL-Coding-Standards?style=social)
-![Tests](https://img.shields.io/github/actions/workflow/status/axewp/WPGraphQL-Coding-Standards/test.yml?branch=develop&label=CI)
-
------
-
-* [Join the WPGraphQL community on Discord.](https://discord.gg/55h7WmYZff)
 
 ## Why use these standards?
 
