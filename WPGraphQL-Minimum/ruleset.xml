@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WPGraphQL Minimum Coding Standard" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+<ruleset
+	name="WPGraphQL Minimum Coding Standard"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd"
+>
 	<description>WPGraphQL Minimum Coding Standard</description>
 
-	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
+	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what
+	should be applied for this Standard. -->
 
 	<rule ref="PHPCompatibilityWP">
 		<include-pattern>*\.php$</include-pattern>
@@ -10,39 +15,47 @@
 
 	<!--
 		Load WordPress VIP Go standards
-		see: https://docs.wpvip.com/technical-references/vip-code-analysis-bot/phpcs-report/
+		We do this first, since we don't trust them to disable rules that we want to use.
+		@see: https://docs.wpvip.com/technical-references/vip-code-analysis-bot/phpcs-report/
 	-->
-	<rule ref="WordPress-VIP-Go" />
+	<rule ref="WordPress-VIP-Go">
+		<!-- Deprecated: @todo remove in PHPCS 4.0 -->
+		<exclude name="WordPressVIPMinimum.JS" />
+	</rule>
 
+	<!--
+		The main WPCS
+		@see: https://github.com/WordPress/WordPress-Coding-Standard
+	-->
 	<rule ref="WordPress">
 		<!-- Definitely should not be added back -->
-		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
-		<exclude name="Universal.Operators.DisallowShortTernary.Found"/>
-		<exclude name="WordPress.Files.FileName"/>
-		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax" />
+		<exclude name="Universal.Operators.DisallowShortTernary.Found" />
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName" />
 
 		<!-- Should probably not be added back -->
-		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
 
 		<!-- Added back in WPGraphQL-Strict -->
 		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter" />
-		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
+		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
 		<exclude name="WordPress.WP.Capabilities.Undetermined" />
-		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
+		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid" />
 	</rule>
 
 	<!-- Tests for inline documentation of code -->
 	<rule ref="WordPress-Docs">
-		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
+		<exclude name="Generic.Commenting.DocComment.MissingShort" />
 
 		<!-- Added back in WPGraphQL-Docs -->
-		<exclude name="Squiz.Commenting"/>
+		<exclude name="Squiz.Commenting" />
 	</rule>
 
 	<!-- Enforce short array syntax -->
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 
 	<!--
 		Slevomat sniffs
@@ -56,7 +69,7 @@
 	<rule ref="SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch" />
 	<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference" />
 	<rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding" />
-	
+
 	<rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator" />
 
 	<rule ref="SlevomatCodingStandard.Functions.StaticClosure" />
@@ -66,9 +79,12 @@
 	<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation">
 		<properties>
 			<property name="ignoredAnnotationNames" type="array">
-				<element value="@phpstan-var" />
+				<element value="@phpstan-import-type" />
 				<element value="@phpstan-param" />
 				<element value="@phpstan-return" />
+				<element value="@phpstan-template" />
+				<element value="@phpstan-type" />
+				<element value="@phpstan-var" />
 			</property>
 		</properties>
 	</rule>

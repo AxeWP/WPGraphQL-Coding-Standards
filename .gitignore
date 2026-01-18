@@ -1,8 +1,11 @@
+# Folders
 .vscode/
 build/
 vendor/
-composer.lock
-phpcs.xml
+
+# Files
 .phpcs.xml
-phpunit.xml
+composer.lock
 phpcs.cache
+phpcs.xml
+phpunit.xml
