@@ -19,7 +19,7 @@ This release adds support for the latest alpha versions of PHPCompatibility and 
 
 ## Misc
 
-- dev: Add support for PHPCompatibility v10-alpha PHPCompatibilityWP v3-alpha.
+- dev: Add support for PHPCompatibility v10-alpha and PHPCompatibilityWP v3-alpha.
 - docs: Update example ruleset to default to PHP 8.2 and WP 6.5.
 - ci: Update GitHub workflow with latest action versions.
 - ci: Add `dependabot.yml` config for GitHub workflows.
