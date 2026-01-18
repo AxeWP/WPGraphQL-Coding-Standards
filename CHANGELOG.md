@@ -6,6 +6,26 @@ This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a 
 
 ## [ Unreleased ]
 
+## [ 2.1.0 ] - 2026-01-18
+
+This release adds support for the latest alpha versions of PHPCompatibility and PHPCompatibilityWP, and makes a few accompanying changes to the rulesets.
+
+## WPGraphQL-Minimum
+- feat: Add additional `@phpstan-*` properties to `SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation.ignoredAnnotationNames`.
+- feat: Exclude deprecated `WordPressVIPMinimum.JS` ruleset.
+
+## WPGraphQL-Extra
+- feat: Add `Squiz.WhiteSpace.FunctionSpacing` to `WPGraphQL-Extra` ruleset to limit max. consecutive blank lines to 1 instead of 2.
+
+## Misc
+
+- dev: Add support for PHPCompatibility v10-alpha and PHPCompatibilityWP v3-alpha.
+- docs: Update example ruleset to default to PHP 8.2 and WP 6.5.
+- ci: Update GitHub workflow with latest action versions.
+- ci: Add `dependabot.yml` config for GitHub workflows.
+- chore: Address misc formatting nits.
+
+
 ## [ 2.0.1 ] - 2025-05-03
 
 This release fixes several bugs where rules were not being disabled correctly.

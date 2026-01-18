@@ -1,24 +1,19 @@
-#
-# Exclude files from release archives.
-# This will also make them unavailable when using Composer with `--prefer-dist`.
-# If you develop for VIPCS using Composer, use `--prefer-source`.
-# https://blog.madewithlove.be/post/gitattributes/
-#
-/.editorconfig export-ignore
-/.gitattributes export-ignore
-/.gitignore export-ignore
-/.phpcs.xml.dist export-ignore
-/phpunit.xml.dist export-ignore
-/.github export-ignore
-/bin export-ignore
-/tests export-ignore
-
-#Auto detect text files and perform LF normalization
+# Automatically normalize line endings.
 * text=auto
 
-#
-# The above will handle all files NOT found below
-#
-*.md text
-*.php text
-*.inc text
+# Files and directories to exclude from the generated archive (export-ignore).
+# These will be omitted from GitHub/Packagist ZIP archives to keep packages small.
+
+/.github export-ignore
+/bin export-ignore
+
+# Don't include the dotfiles for distribution.
+/.* export-ignore
+/.phpcs.xml.dist export-ignore
+/.phpcs.xml.dist.example export-ignore
+
+# Mark docs as documentation for GitHub Linguist.
+/CHANGELOG.md linguist-documentation export-ignore
+/README.md linguist-documentation
+/LICENSE linguist-documentation
+

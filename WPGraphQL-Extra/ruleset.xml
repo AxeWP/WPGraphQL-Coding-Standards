@@ -1,10 +1,23 @@
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WPGraphQL Strict Coding Standard" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+<ruleset
+	name="WPGraphQL Strict Coding Standard"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://schema.phpcodesniffer.com/phpcs.xsd"
+>
 	<description>Best practices beyond the WPGraphQL core standards</description>
 
 	<rule ref="WPGraphQL-Strict" />
 
 	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
+
+	<!-- Limit max. consecutive blank lines to 1 instead of 2. -->
+	<rule ref="Squiz.WhiteSpace.FunctionSpacing">
+		<properties>
+			<property name="spacing" value="1" />
+			<property name="spacingBeforeFirst" value="0" />
+			<property name="spacingAfterLast" value="0" />
+		</properties>
+	</rule>
 
 	<!-- These formatting rules are suppressed in VIP-GO and restored here.-->
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
@@ -23,8 +36,8 @@
 	<rule ref="SlevomatCodingStandard.Classes.ConstantSpacing" />
 	<rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
 		<properties>
-			<property name="linesCountAfterOpeningBrace" value="0"/>
-			<property name="linesCountBeforeClosingBrace" value="0"/>
+			<property name="linesCountAfterOpeningBrace" value="0" />
+			<property name="linesCountBeforeClosingBrace" value="0" />
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Classes.EnumCaseSpacing" />
@@ -35,7 +48,7 @@
 	<rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration" />
 	<rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
 		<properties>
-			<property name="linesCountBeforeFirstUseWhenFirstInClass" value="0"/>
+			<property name="linesCountBeforeFirstUseWhenFirstInClass" value="0" />
 		</properties>
 	</rule>
 
