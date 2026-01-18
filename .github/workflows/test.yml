@@ -73,7 +73,7 @@ jobs:
         uses: phpcsstandards/xmllint-validate@0fd9c4a9046055f621fca4bbdccb8eab1fd59fdc # v1.0.1
         with:
           pattern: "./*/ruleset.xml"
-          xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
+          xsd-file: "vendor/phpcsstandards/phpcsdevtools/DocsXsd/phpcsdocs.xsd"
 
       - name: Lint WPGraphQL Core
         run: |

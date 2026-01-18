@@ -3,7 +3,7 @@
 ![Packagist License](https://img.shields.io/packagist/l/axepress/wp-graphql-cs?color=green) ![Packagist Downloads](https://img.shields.io/packagist/dt/axepress/wp-graphql-cs) ![Packagist Version](https://img.shields.io/packagist/v/axepress/wp-graphql-cs?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/AxeWP/WPGraphQL-Coding-Standards/2.1.0) ![GitHub Repo stars](https://img.shields.io/github/stars/AxeWP/WPGraphQL-Coding-Standards?style=social) ![Tests](https://img.shields.io/github/actions/workflow/status/axewp/WPGraphQL-Coding-Standards/test.yml?branch=develop&label=CI)
 
 -----
-This project is a collection of rules and sniffs for [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) to validate code developed for the [WPGraphQL](https://github.com/wp-graphql/wp-graphql) ecosystem. It uses rules from:
+This project is a collection of rules and sniffs for [PHPCS](https://github.com/PHPCSStandards/PHP_CodeSniffer) to validate code developed for the [WPGraphQL](https://github.com/wp-graphql/wp-graphql) ecosystem. It uses rules from:
  - [WordPress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards)
  - [Automattic VIP Coding Standards](https://github.com/Automattic/VIP-Coding-Standards)
  - [Slevomat Coding Standard](https://https://github.com/slevomat/coding-standard)
@@ -50,7 +50,7 @@ For more information about installation and usage, see the [WPCS readme](https:/
 
 > To quick-start your project, you can copy the [example config file](./phpcs.xml.dist.example) to your project root and rename it to `.phpcs.xml.dist`, then update the individual values as explained below.
 
-The best way to use these sniffs in your project is to create a [local configuration file](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#using-a-default-configuration-file) that extends the rulesets provided by this project. When you name this file either `.phpcs.xml`, `phpcs.xml`, `.phpcs.xml.dist` or `phpcs.xml.dist`, PHP_CodeSniffer will automatically locate it as long as it is placed in the directory from which you run the CodeSniffer or in a directory above it.
+The best way to use these sniffs in your project is to create a [local configuration file](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage#using-a-default-configuration-file) that extends the rulesets provided by this project. When you name this file either `.phpcs.xml`, `phpcs.xml`, `.phpcs.xml.dist` or `phpcs.xml.dist`, PHP_CodeSniffer will automatically locate it as long as it is placed in the directory from which you run the CodeSniffer or in a directory above it.
 
 In this file, you will want to configure the following:
 
