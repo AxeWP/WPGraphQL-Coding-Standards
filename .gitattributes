@@ -9,6 +9,9 @@
 # Don't include the dotfiles for distribution.
 /.* export-ignore
 
+/release-please-config.json export-ignore
+/version.txt export-ignore
+
 # Mark docs as documentation for GitHub Linguist.
 /CHANGELOG.md linguist-documentation export-ignore
 /README.md linguist-documentation

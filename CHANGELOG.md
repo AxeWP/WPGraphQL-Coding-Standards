@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file.
 
 This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a CHANGELOG](https://keepachangelog.com/).
 
-## [ Unreleased ]
-
 ## [ 2.1.0 ] - 2026-01-18
 
 This release adds support for the latest alpha versions of PHPCompatibility and PHPCompatibilityWP, and makes a few accompanying changes to the rulesets.

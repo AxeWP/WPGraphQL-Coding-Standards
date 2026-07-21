@@ -48,16 +48,16 @@ For more information about installation and usage, see the [WPCS readme](https:/
 
 ## Configuring your custom ruleset.
 
-> To quick-start your project, you can copy the [example config file](./phpcs.xml.dist.example) to your project root and rename it to `.phpcs.xml.dist`, then update the individual values as explained below.
+> To quick-start your project, you can copy the [example config file](./.phpcs.xml.dist.example) to your project root and rename it to `.phpcs.xml.dist`, then update the individual values as explained below.
 
 The best way to use these sniffs in your project is to create a [local configuration file](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage#using-a-default-configuration-file) that extends the rulesets provided by this project. When you name this file either `.phpcs.xml`, `phpcs.xml`, `.phpcs.xml.dist` or `phpcs.xml.dist`, PHP_CodeSniffer will automatically locate it as long as it is placed in the directory from which you run the CodeSniffer or in a directory above it.
 
 In this file, you will want to configure the following:
 
-- [`testVersion`](./phpcs.xml.dist.example#L33) - The minimum PHP version you want to test against. This should be the _lowest version of PHP that you want to support_. While WPGraphQL officially supports PHP 7.1+, we recommend testing against PHP 7.3 (the current lowest version actively [tested against](https://github.com/wp-graphql/wp-graphql/blob/develop/.github/workflows/testing-integration.yml)) or higher.
-- [`minimum_wp_version`](./phpcs.xml.dist.example#L43) - The minimum WordPress version you want to test against. This should be the lowest version of WordPress that you want to support. While WPGraphQL officially supports WordPress 5.0+, we recommend testing against WordPress 5.6 (the current lowest version actively [tested against](https://github.com/wp-graphql/wp-graphql/blob/develop/.github/workflows/testing-integration.yml)) or higher.
-- [`WordPress.WP.I18n.text_domain`](./phpcs.xml.dist.example#L63) - The text domain used in your project. This is used by the `WordPress.WP.I18n` sniff to check that all translatable strings are assigned to a text domain. We recommend using the format `wp-graphql-<project-name>`.
-- [`WordPress.NamingConventions.PrefixAllGlobals`](./phpcs.xml.dist.example#L57) - The list of prefixes used in your project. This is used by the `WordPress.NamingConventions.PrefixAllGlobals` sniff to check that all global functions, classes, constants, and variables are prefixed.
+- [`testVersion`](./.phpcs.xml.dist.example#L33) - The minimum PHP version you want to test against. This should be the _lowest version of PHP that you want to support_. While WPGraphQL officially supports PHP 7.1+, we recommend testing against PHP 7.3 (the current lowest version actively [tested against](https://github.com/wp-graphql/wp-graphql/blob/develop/.github/workflows/testing-integration.yml)) or higher.
+- [`minimum_wp_version`](./.phpcs.xml.dist.example#L43) - The minimum WordPress version you want to test against. This should be the lowest version of WordPress that you want to support. While WPGraphQL officially supports WordPress 5.0+, we recommend testing against WordPress 5.6 (the current lowest version actively [tested against](https://github.com/wp-graphql/wp-graphql/blob/develop/.github/workflows/testing-integration.yml)) or higher.
+- [`WordPress.WP.I18n.text_domain`](./.phpcs.xml.dist.example#L63) - The text domain used in your project. This is used by the `WordPress.WP.I18n` sniff to check that all translatable strings are assigned to a text domain. We recommend using the format `wp-graphql-<project-name>`.
+- [`WordPress.NamingConventions.PrefixAllGlobals`](./.phpcs.xml.dist.example#L57) - The list of prefixes used in your project. This is used by the `WordPress.NamingConventions.PrefixAllGlobals` sniff to check that all global functions, classes, constants, and variables are prefixed.
 
 ## Development and Support
 
