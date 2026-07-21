@@ -1,5 +1,8 @@
 <!--
 Thanks for taking the time to submit a Pull Request.
+
+The PR title must follow Conventional Commits (e.g. `fix: correct the Foo sniff exclusion`),
+since it becomes the squashed commit message and drives the changelog and the next release.
 -->
 
 ## What
@@ -17,4 +20,4 @@ Thanks for taking the time to submit a Pull Request.
 ## Checklist:
 <!-- We encourage you to complete this checklist to the best of your abilities. If you can't do everything, that's okay too.  -->
 - [ ] My code is tested to the best of my abilities.
-- [ ] I included the relevant changes in CHANGELOG.md
+- [ ] My PR title follows Conventional Commits.
