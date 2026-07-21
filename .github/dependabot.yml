@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # Runtime deps are user-facing (they change which sniffs consumers get), so
+    # `build` cuts a release. Dev-only deps are `chore` and stay out of the changelog.
+    commit-message:
+      prefix: "build"
+      prefix-development: "chore"
+      include: "scope"
     cooldown:
       semver-major-days: 30
       semver-minor-days: 7
@@ -17,6 +23,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "ci"
     groups:
       github-actions-updates:
         patterns: ["*"]
